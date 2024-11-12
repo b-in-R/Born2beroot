@@ -1,0 +1,33 @@
+
+sudo ufw status
+sudo systemctl status ssh
+sudo service sshd status
+
+getent group sudo
+getent group user42
+
+sudo adduser new username
+sudo groupadd groupname
+sudo usermod -aG groupname username
+sudo chage -l username
+
+hostnamectl
+hostnamectl set-hostname new_hostname
+
+lsblk 
+
+dpkg -l | grep sudo 
+
+sudo ufw status numbered
+sudo ufw allow 8080
+sudo ufw delete rule number
+
+ssh your_user_id@localhost -p 4242
+
+/usr/local/bin/monitoring.sh
+sudo crontab -u root -e
+*/1 * * * * sleep 30s /usr/local/bin/monitoring.sh
+
+log /var/log/sudo/sudo.log
+password policies /etc/pam.d/common-password
+list user : cut -d: -f1 /etc/passwd

@@ -16,6 +16,7 @@
 
     - systeme d'exploitation: Debian
         - se renseigner sur le systeme (par ex. diff entre aptitude et apt)
+        ! depuis .iso (tous fichiers necessaires a un soft, remplace un disque d'installation etc)
 
     - ??AppArmor devra rester actif
 
