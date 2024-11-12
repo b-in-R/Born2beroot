@@ -24,7 +24,7 @@
     - ??KDump a mettre en place 
 
     - creer au minimum 2 ppartitions chiffrees en utilisant LVM
-        exemple:
+#        exemple:
                 wil@wil:~$ lsblk
                 NAME                         MAJ:MIN RM  SIZE    RO  TYPE    MOUNTPOINT
                 sda                            8:0   0   8G      0   disk    
@@ -38,16 +38,16 @@
                 sr0                            11:0  1   1024M   0   rom
                 wil@wil:~$ _
 
-    - ??service SSH obligatoirement actif sur port 4242 de la VM
+/    - ??service SSH obligatoirement actif sur port 4242 de la VM
         - interdiction de se connecter avec par SSH avec user root
         - ??ssh a tester en creeant un nouveau compte, comprendre comment fonctionne ce service
 
-    - Securite:
+/    - Securite:
         - Pare-feu: UFW
             - laisser ouvert que le port 4242 de la VM
             - devra etre actif au lancement de la VM
 
-        - MDP:
+/        - MDP:
             - devra expirer tous les 30 jours
             - 2 jours min avant de pouvoir le modifier
             - l'utilisateur doit recevoir un avertissement 7 jours avant que le mdp expire
@@ -56,10 +56,10 @@
             - ne devra pas comporter le nom de l'utilisateur associe
             - devra comporter au moins 7 caract qui ne sont pas dans l'ancien mdp (sauf pour user root)
 
-            - apres avoir mis en place les fichiers de config, les mdp de tous les comptes
+/            - apres avoir mis en place les fichiers de config, les mdp de tous les comptes
               doivent etre changes (dont root)
 
-    - Utilisateurs
+/    - Utilisateurs
         - hostname: rabiner42
             - il faut pouvoir le modifier
         - ??root (meme que hostname?)
@@ -67,7 +67,7 @@
             - appartiendra aux groupes user42 et sudo
         - il faut pouvoir creer un nouvel utilisateur et lui assigner un groupe
 
-    - ??sudo
+/    - ??sudo
         - 3 essais max en cas de mdp faux pour s'authentifier en utilisant sudo
         - un message doit s'afficher (au choix) suite a un mauvais mdp (en utilisant sudo)
         - chaque action utilisant sudo sera archivee, input comme outputs,
@@ -76,12 +76,12 @@
         - ?? les path utilisables par sudo seront restrints pour securite
             - ??ex: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
 
-    - Script a mettre en place: monitoring.sh (a dev en bash)
+/    - Script a mettre en place: monitoring.sh (a dev en bash)
         - des le lancement du serveur, le script ecrira les informations suivantes
           toutes les 10min sur tous les terminaux (??voir wall), ??la banniere est facultative
           a aucun moment la moindre erreur ne doit etre visible
-        
-        - infos du script:
+
+/        - infos du script:
             - architecture du sys d'exploit et sa version de kernel
             - nbr de processeurs physiques
             - nbr de processeurs virtuels
@@ -95,10 +95,10 @@
             - adresse IPv4 et MAC du serveur
             - nbre de commande executees avec le prog sudo
 
-            - il faut pouvoir expliquer le fonctionnement du script et interrompre l'execution 
+/            - il faut pouvoir expliquer le fonctionnement du script et interrompre l'execution 
               sans le modifier (??voir cron)
 
-            - ex de rendu:
+/            - ex de rendu:
                 Broadcast message from root@wil (tty1) (Sun Apr 25 25:45:00 2021):
 
                    #Architecture: Linux wil 4.23.0-16-amd64 #1 SMP Debian 4.19.181-1 (2021-03-19) x86_64 GNU/Linux
@@ -115,7 +115,7 @@
                    #Sudo: 42 cmd
 
 
-    - exemples de commandes pour tests: (wil est le nom d'utilisateur d'exemple)
+/    - exemples de commandes pour tests: (wil est le nom d'utilisateur d'exemple)
 
         root@wil:~# head -n 2 /etc/os-release
         PRETTY_NAME="Debian GNU/Linux 10 (buster)"
