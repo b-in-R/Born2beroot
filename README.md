@@ -135,3 +135,9 @@
         --                  ------      ----
         4242                ALLOW       Anywhere
         4242(v6)            ALLOW       Anywhere (v6)
+
+
+controle:
+    verifier parefeu:   systemctl status ufw    (stop, start)
+    voir lvm
+    https://www.42evals.com/sheets/66b9c78fe6188711fc26b86a
