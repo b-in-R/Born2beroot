@@ -16,9 +16,9 @@
 
     - systeme d'exploitation: Debian
         - se renseigner sur le systeme (par ex. diff entre aptitude et apt)
-        ! depuis .iso (tous fichiers necessaires a un soft, remplace un disque d'installation etc)
 
     - ??AppArmor devra rester actif
+        --> module de securite pour noyau linux qui fournit un controle d'acces obligatoire, permet de restraindre les capacites des applis en fonction des profils
 
     - ??SELinux devra rester actif (a verifier p.5)
     
@@ -48,7 +48,7 @@
             - laisser ouvert que le port 4242 de la VM
             - devra etre actif au lancement de la VM
 
-/        - MDP:
+/        - MDP: cyfze9pzP
             - devra expirer tous les 30 jours
             - 2 jours min avant de pouvoir le modifier
             - l'utilisateur doit recevoir un avertissement 7 jours avant que le mdp expire
